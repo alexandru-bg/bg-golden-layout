@@ -8,9 +8,13 @@ import { GoldenLayoutContainer } from '@embedded-enterprises/ng6-golden-layout';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent {
-
+  id = 0;
   constructor(
-    private goldenLayout: GoldenLayout,
+    // private goldenLayout: GoldenLayout,
     @Inject(GoldenLayoutContainer) private container: GoldenLayout.Container
-  ) { }
+  ) {
+
+    this.id = new Date().getTime();
+    console.log('done', this.id);
+   }
 }
